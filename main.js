@@ -141,10 +141,13 @@ function renderScore() {
 
 function loseGame() {
     const head = snake.parts[0];
-    for (i = 1; i < snake.parts[snake.parts.length]; i++) {
-        let part = snake.parts[i];
-        if (head.x === part.x && head.y === part.y) {
-            alert("You lose!");
+    if (snake.parts.length >= 3) {
+        for (i = 1; i < snake.parts.length; i++) {
+            let part = snake.parts[i];
+            if (head.x === part.x && head.y === part.y) {
+                alert("You lose! Your score is " + game.score);
+                location.reload();
+            }
         }
     }
 }
