@@ -3,7 +3,7 @@
 
 <head>
     <meta charset='UTF-8'>
-    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=0.70">
     <link rel='stylesheet' href='style.css'>
     <title>SnakeJS</title>
 </head>
@@ -13,12 +13,11 @@
     <h2 id="score"></h2>
     <canvas id="game" width="500" height="500"></canvas>
     <script src="main.js"></script>
-    <div class='controls-up-down'>
+    <div class='controls-up'>
         <button class="control-button" onclick="handleButtonPress('UP')">↑</button>
-        <button class="control-button" onclick="handleButtonPress('LEFT')">←</button>
-
     </div>
-    <div class='controls-left-right'>
+    <div class='controls-left-down-right'>
+        <button class="control-button" onclick="handleButtonPress('LEFT')">←</button>
         <button class="control-button" onclick="handleButtonPress('DOWN')">↓</button>
         <button class="control-button" onclick="handleButtonPress('RIGHT')">→</button>
     </div>

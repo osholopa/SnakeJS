@@ -33,12 +33,12 @@ h2 {
   color: #fafafa;
 }
 
-.controls-up-down {
+.controls-up {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
-.controls-left-right {
+.controls-left-down-right {
   display: flex;
   flex-direction: row;
 }
