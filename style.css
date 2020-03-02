@@ -31,16 +31,16 @@ h2 {
 
 .controls-up-down {
   position: absolute;
-  top: 70vh;
-  left: 20vw;
+  top: 725px;
+  left: 240px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .controls-left-right {
   display: flex;
   flex-direction: row;
   position: absolute;
-  top: 75vh;
-  left: 50vw;
+  top: 725px;
+  left: 460px;
 }
