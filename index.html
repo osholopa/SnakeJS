@@ -1,24 +1,26 @@
-<style>
-    body {
-        text-align: center;
-        background: #333b44;
-    }
+<!DOCTYPE html>
+<html lang='en'>
 
-    canvas {
-        margin-top: 40px;
-        background: #417703;
-        border: 10px solid black;
-    }
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='style.css'>
+    <title>SnakeJS</title>
+</head>
 
-    h1 {
-        text-decoration: underline;
-    }
+<body>
+    <h1>JavaScript Snake Game</h1>
+    <h2 id="score"></h2>
+    <canvas id="game" width="500" height="500"></canvas>
+    <script src="main.js"></script>
+    <div class='controls-up-down'>
+        <button class="control-button" onclick="handleButtonPress('UP')">↑</button>
+        <button class="control-button" onclick="handleButtonPress('DOWN')">↓</button>
+    </div>
+    <div class='controls-left-right'>
+        <button class="control-button" onclick="handleButtonPress('LEFT')">←</button>
+        <button class="control-button" onclick="handleButtonPress('RIGHT')">→</button>
+    </div>
+</body>
 
-    h2 {
-        padding: 20px;
-    }
-</style>
-<h1>JavaScript Snake Game</h1>
-<h2 id="score"></h2>
-<canvas id="game" width="500" height="500"></canvas>
-<script src="main.js"></script>
+</html>
