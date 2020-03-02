@@ -149,7 +149,7 @@ function eatApple() {
     apple.alive = false
     snake.grow()
     newApple()
-    game.score++
+    game.score += 100
   }
 }
 
@@ -163,8 +163,15 @@ function loseGame() {
     for (i = 1; i < snake.parts.length; i++) {
       let part = snake.parts[i]
       if (head.x === part.x && head.y === part.y) {
-        alert("You lose! Your score is " + game.score)
-        location.reload()
+        if (
+          window.confirm(
+            `Game Over! Your score is  + ${game.score}. Play again?`
+          )
+        ) {
+          window.location.reload()
+        } else {
+          window.close()
+        }
       }
     }
   }
