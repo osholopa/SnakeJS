@@ -1,6 +1,6 @@
 const canvas = document.getElementById("game")
 const ctx = canvas.getContext("2d")
-let frameTime = 100
+let frameTime = 90
 const gridWidthInCells = 50
 const cellSize = canvas.width / gridWidthInCells
 ////////////////Oliot, Eventlistenerit, Const-määrittelyt///////////////
@@ -25,8 +25,11 @@ const keysDown = {}
 window.addEventListener("load", startGame)
 
 window.addEventListener("keydown", e => {
-  const key = e.key
-  keysDown[key] = true
+  const pressedKey = e.key
+  for(var key in keysDown) {
+    keysDown[key] = false
+  }
+  keysDown[pressedKey] = true
 })
 
 window.addEventListener("keyup", e => {
@@ -42,7 +45,6 @@ const snake = {
       x: snake.parts[snake.parts.length - 1].x,
       y: snake.parts[snake.parts.length - 1].y
     })
-    console.log(this.parts.length)
   }
 }
 
@@ -115,13 +117,14 @@ function keepSnakeOnCanvas() {
     head.y = gridWidthInCells
   }
 }
+
 function moveSnake() {
   keepSnakeOnCanvas()
   const tail = snake.parts[snake.parts.length - 1]
   const head = snake.parts[0]
   switch (snake.direction) {
     case "RIGHT":
-      //määritellään hännän x olevan yhtä kuin pään x + 1, jolloin arrayn vika olio napataan käärmeen 1. osaksi
+      //määritellään hännän x olevan yhtä kuin pään x + 1, jolloin taulukon vika alkio napataan käärmeen pääksi
       tail.x = head.x + 1
       tail.y = head.y
       break
@@ -168,7 +171,7 @@ function loseGame() {
             `Game Over! Your score is  + ${game.score}. Play again?`
           )
         ) {
-          window.location.reload()
+          location.reload()
         } else {
           window.close()
         }
