@@ -4,15 +4,19 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #333b44;
+  background: #0b4066;
   font-family: monospace;
   color: #fafafa;
 }
 
+.game-window {
+  display: flex;
+  position: relative;
+}
 canvas {
   margin-top: 40px;
   background: #417703;
-  border: 10px solid black;
+  border: 5px solid #222222;
 }
 
 h1 {
@@ -23,22 +27,31 @@ h2 {
   padding: 20px;
 }
 
-.control-button {
-  width: 100px;
-  height: 100px;
-  font-size: 50px;
-  margin: 5px;
-  border-radius: 10px;
-  background-color: #770341;
-  color: #fafafa;
+.fake-btn {
+  background-color: gray;
+  color: black;
+  box-shadow: 5px 10px;
+  padding: 20px;
+  border-radius: 50%;
+  font-size: 24px;
 }
 
-.controls-up {
-  display: flex;
-  flex-direction: column;
+#a {
+  position: absolute;
+  right: 35%;
+  bottom: 20%;
 }
 
-.controls-left-down-right {
-  display: flex;
-  flex-direction: row;
+#b {
+  position: absolute;
+  right: 25%;
+  bottom: 15%;
+}
+
+#score {
+  position: absolute;
+  color: black;
+  top: 5px;
+  right: 20px;
+  font-family: sans-serif;
 }

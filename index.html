@@ -9,18 +9,17 @@
 </head>
 
 <body>
-    <h1>JavaScript Snake Game</h1>
-    <h2 id="score"></h2>
-    <canvas id="game" width="500" height="500"></canvas>
+    <div class="game-window">
+        <h2 id="score"></h2>
+        <canvas id="game" width="500" height="500">
+        </canvas>
+    </div>
+    <audio crossorigin="anonymous" autoplay>
+        <source src="blip.wav" type="audio/wav">
+    </audio>
     <script src="main.js"></script>
-    <div class='controls-up'>
-        <button class="control-button" onclick="handleButtonPress('UP')">↑</button>
-    </div>
-    <div class='controls-left-down-right'>
-        <button class="control-button" onclick="handleButtonPress('LEFT')">←</button>
-        <button class="control-button" onclick="handleButtonPress('DOWN')">↓</button>
-        <button class="control-button" onclick="handleButtonPress('RIGHT')">→</button>
-    </div>
+    <span id="a" class="fake-btn">A</span>
+    <span id="b" class="fake-btn">B</span>
 </body>
 
 </html>
